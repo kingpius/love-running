@@ -25,11 +25,15 @@ body {
 
 /* Header */
 header{ 
-    background-color: #333;
+    background-color: #ffffff;
     font-family: poppins, sans-serif;
-    color: white;
-    padding: 10px;
+    color: black;
+    padding: 0 1rem;
+    position: fixed;
     text-align: center;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
 }
 
 /* Main */
@@ -67,5 +71,5 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: black;
 }
