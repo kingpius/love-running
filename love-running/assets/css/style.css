@@ -36,6 +36,19 @@ header{
     box-shadow: 0 2px 2px #3a3a3a;
 }
 
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-family: poppins, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 20px 0;
+    letter-spacing: 1px;
+}
+
 /* Main */
 main {
     background-color: azure;
