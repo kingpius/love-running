@@ -49,12 +49,28 @@ h1 {
     letter-spacing: 1px;
 }
 
+/** Menu Styling*/
+#menu {
+    font-family: poppins, sans-serif;
+    font-size: 80%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu li {
+    display: block;
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
 /* Main */
 main {
     background-color: azure;
     /* Make main element take up any surplus space to ensure footer is at the bottom */
     flex: 1 0 auto;
-   
+
     padding: 20px;  
 }
 
@@ -70,19 +86,32 @@ footer {
 }
 
 /* Navigation */
+/* Base navigation styling - will be vertical by default (mobile-first approach) */
 nav ul {
-    display: flex;
+    display: block; /* Vertical layout for mobile */
     list-style-type: none;
     padding: 0;
     margin: 0;
-    justify-content: center;
+    text-align: center;
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: black;
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex; /* Switch to horizontal on larger screens */
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin-right: 20px;
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+    
+    nav ul li:last-child {
+        margin-right: 0; /* Remove margin from last item */
+    }
 }
