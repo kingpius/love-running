@@ -193,4 +193,16 @@ nav {
     padding-left: 1rem; /* Add padding to the left */
 }
 
+.nav-toggle-label {
+    display: none; /* Hide the toggle label on larger screens */
+}
+
+/*logo display is enlarged*/
+#logo {
+    font-size: 200%;
+    line-height: 75px;
+    margin: 0 0.5rem;
+
+}
+
 }
