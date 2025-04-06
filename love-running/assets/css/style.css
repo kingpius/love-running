@@ -30,7 +30,7 @@ header{
     color: black;
     padding: 0 1rem;
     position: fixed;
-    text-align: center;
+    text-align: left;
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
@@ -62,13 +62,26 @@ h1 {
     float: none;
     width: 100%;
     margin-bottom: 10px;
+    text-align: left;
 }
 
-
+/*showing the active page*/
 .active {
     border-bottom: #333 solid 2px;
-    
+
 }
+
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+}
+
 
 /* Hero section styles */
 .hero {
