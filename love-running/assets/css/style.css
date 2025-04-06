@@ -137,6 +137,7 @@ main {
     flex: 1 0 auto;
 
     padding: 20px;  
+    margin-top: 47px;
 }
 
 /* Adjust main content to account for fixed header */
@@ -175,17 +176,21 @@ nav ul li {
 
 /* Media query for larger screens */
 @media screen and (min-width: 768px) {
-    nav ul {
-        display: flex; /* Switch to horizontal on larger screens */
-        justify-content: center;
-    }
-    
-    nav ul li {
-        margin-right: 20px;
-        margin-bottom: 0; /* Remove bottom margin */
-    }
-    
-    nav ul li:last-child {
-        margin-right: 0; /* Remove margin from last item */
-    }
+/* Header */
+nav {
+    display: block;
+    position: relative; /* Change to relative for larger screens */
+    box-shadow: none; /* Remove shadow */
+    width: fit-content; /* Adjust width to fit content */
+    padding-right: 1rem; /* Add padding to the right */
+}
+
+#menu {
+    display: flex; /* Horizontal layout for larger screens */
+}
+
+#menu li {
+    padding-left: 1rem; /* Add padding to the left */
+}
+
 }
