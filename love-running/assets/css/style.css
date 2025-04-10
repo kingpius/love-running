@@ -161,7 +161,14 @@ footer {
     bottom: 0;
 }
 
+/* Footer links for social media */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly
 
+}
 /* Navigation */
 /* Base navigation styling - will be vertical by default (mobile-first approach) */
 nav ul {
