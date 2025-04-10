@@ -154,11 +154,13 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
+    justify-content: center;
     padding: 10px;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
+
 
 /* Navigation */
 /* Base navigation styling - will be vertical by default (mobile-first approach) */
@@ -173,6 +175,10 @@ nav ul {
 nav ul li {
     margin-bottom: 10px;
 }
+
+
+
+
 
 /* Media query for larger screens */
 @media screen and (min-width: 768px) {
