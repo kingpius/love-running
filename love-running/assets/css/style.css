@@ -1,13 +1,9 @@
-
- /* Google fonts import */
+/* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Asterisk wildcard selector to override default styles added by the browser */
+/* Base styles */
 * {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,19 +14,15 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /*Generick project styles*/
     color: #3a3a3a;
 }
 
-
-/* Header */
-header{ 
+/* Header styles */
+header { 
     background-color: #ffffff;
-    font-family: poppins, sans-serif;
     color: black;
     padding: 0 1rem;
     position: fixed;
-    text-align: left;
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
@@ -131,21 +123,113 @@ nav {
 
 
 /* Main */
+
+/* Main content styles */
 main {
     background-color: azure;
     /* Make main element take up any surplus space to ensure footer is at the bottom */
     flex: 1 0 auto;
-
     padding: 20px;  
-    margin-top: 47px;
+    margin-top: 100px; /* Add margin to account for fixed header */
 }
 
-/* Adjust main content to account for fixed header */
-main {
-    background-color: azure;
-    flex: 1 0 auto;
-    padding: 20px;
-    margin-top: 100px; /* Add margin to account for fixed header */
+/* Card-like styling for index page */
+main .card {
+    background-color: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.card-list {
+    padding-left: 20px;
+}
+
+.card-list li {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Card Styles in Index Page */
+.story {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-title {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.card-body {
+    color: #555;
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+}
+
+.card-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.card-list li:hover {
+    background-color: #f8f9fa;
+}
+
+.card-list i {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Add some responsive styling */
+@media (max-width: 768px) {
+    .card {
+        padding: 15px;
+        margin: 15px 10px;
+    }
 }
 
 
@@ -166,7 +250,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     display: flex;
-    justify-content: space-evenly
+    justify-content: space-evenly;
 
 }
 /* Navigation */
@@ -185,45 +269,208 @@ nav ul li {
 
 
 
+/* Media Queries - Combined */
+@media screen and (max-width: 768px) {
+    /* Mobile styles */
+    #company-signup-form,
+    #candidate-signup-form {
+        margin: 30px 15px;
+        padding: 20px;
+    }
 
+    .form-group input {
+        font-size: 14px;
+    }
 
-/* Media query for larger screens */
+    .company-signup-form h2,
+    .candidate-signup-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 15px;
+        margin: 15px 10px;
+    }
+}
+
 @media screen and (min-width: 768px) {
-/* Header */
-nav {
-    display: block;
-    position: relative; /* Change to relative for larger screens */
-    box-shadow: none; /* Remove shadow */
-    width: fit-content; /* Adjust width to fit content */
-    padding-right: 1rem; /* Add padding to the right */
+    /* Desktop styles */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #logo {
+        font-size: 200%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
 }
 
-#menu {
-    display: flex; /* Horizontal layout for larger screens */
-}
-
-#menu li {
-    padding-left: 1rem; /* Add padding to the left */
-}
-
-.nav-toggle-label {
-    display: none; /* Hide the toggle label on larger screens */
-}
-
-/*logo display is enlarged*/
-#logo {
-    font-size: 200%;
-    line-height: 75px;
-    margin: 0 0.5rem;
-
-}
-
-/* Large devised (laptops and desktops, 999px and up) */
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover{
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
-     }
+}
 
+/* Form Containers */
+#company-signup-form,
+#candidate-signup-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+/* Form Headers */
+.company-signup-form h2,
+.candidate-signup-form h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Input Fields */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Input Focus States */
+.form-group input:focus {
+    border-color: #333;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.1);
+}
+
+/* File Input Styling */
+.form-group input[type="file"] {
+    padding: 10px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.form-group input[type="file"]:hover {
+    background-color: #e9ecef;
+}
+
+/* Number Input Specific Styling */
+.form-group input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #555;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Validation States */
+.form-group input:invalid {
+    border-color: #ff4444;
+}
+
+.form-group input:valid {
+    border-color: #00C851;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #company-signup-form,
+    #candidate-signup-form {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    .company-signup-form h2,
+    .candidate-signup-form h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #candidate-signup-form {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+    
+    .form-group input {
+        font-size: 14px;
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card-list li {
+        font-size: 0.95rem;
+    }
 }
