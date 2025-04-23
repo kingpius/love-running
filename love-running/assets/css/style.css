@@ -431,6 +431,141 @@ nav ul li {
     border-color: #00C851;
 }
 
+/* Live Jobs Page */
+
+/* Jobs Table Container */
+.jobs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.jobs-container h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+/* Table Styling */
+.jobs-table {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Table Header */
+.table-header {
+    display: flex;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    font-weight: 600;
+}
+
+.header-cell {
+    padding: 1rem;
+    color: #495057;
+}
+
+/* Table Rows */
+.job-row {
+    display: flex;
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.2s ease;
+    align-items: center;
+}
+
+.job-row:hover {
+    background-color: #f8f9fa;
+}
+
+.job-row:last-child {
+    border-bottom: none;
+}
+
+/* Table Cells */
+.cell {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Cell Width Distribution */
+.logo-cell {
+    flex: 0 0 15%;
+}
+
+.company-cell {
+    flex: 0 0 25%;
+    font-weight: 500;
+}
+
+.title-cell {
+    flex: 0 0 30%;
+}
+
+.score-cell {
+    flex: 0 0 30%;
+}
+
+/* Logo Styling */
+.logo-cell img {
+    max-height: 40px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Scorecard Styling */
+.scorecard {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 20px;
+    height: 15px;
+    overflow: hidden;
+}
+
+.score-bar {
+    height: 100%;
+    background: linear-gradient(to right, #38ef7d, #11998e);
+    border-radius: 20px;
+    color: white;
+    font-size: 0.75rem;
+    line-height: 15px;
+    text-align: right;
+    padding-right: 8px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .table-header {
+        display: none; /* Hide headers on mobile */
+    }
+    
+    .job-row {
+        flex-direction: column;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+    }
+    
+    .cell {
+        padding: 0.5rem 0;
+        width: 100%;
+    }
+    
+    .cell::before {
+        content: attr(data-label);
+        font-weight: 600;
+        margin-right: 0.5rem;
+    }
+    
+    .logo-cell, .company-cell, .title-cell, .score-cell {
+        flex: 1 0 100%;
+    }
+}
+
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     #company-signup-form,
