@@ -95,14 +95,18 @@ nav {
 /* Hero section styles */
 .hero {
     position: relative;
-    height: 400px; /* Adjust height as needed */
-    background-image: url('../favicon/annika-palmari-RIt88XBR3G0-unsplash.jpg');
+    height: 200vh;
+    width: 100%;
+    background-image: url('../favicon/annika-palmari-Rit88XBR3G0-unsplash.jpg'); 
+    background-color: #f5f5f5;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 76px;
 }
 
 .hero-text {
